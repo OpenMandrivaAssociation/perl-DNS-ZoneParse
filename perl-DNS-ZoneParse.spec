@@ -10,6 +10,7 @@ URL:		http://search.cpan.org/dist/%{real_name}
 Source:		http://search.cpan.org/CPAN/authors/id/S/SI/SIMONFLK/%{real_name}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 This module will parse a Zone File and put all the Resource Records (RRs) into
