@@ -1,16 +1,15 @@
-%define	real_name DNS-ZoneParse
+%define	module DNS-ZoneParse
 
-Summary:	DNS::ZoneParse - Parse and manipulate DNS Zone Files
-Name:		perl-%{real_name}
+Name:		perl-%{module}
 Version:	0.95
-Release:	%mkrel 2
+Release:	%mkrel 3
+Summary:	Parse and manipulate DNS Zone Files
 License:	GPL or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source:		http://search.cpan.org/CPAN/authors/id/S/SI/SIMONFLK/%{real_name}-%{version}.tar.bz2
+URL:		http://search.cpan.org/dist/%{module}
+Source:		http://search.cpan.org/CPAN/modules/by-module/DNS/%{module}-%{version}.tar.bz2
 BuildArch:	noarch
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module will parse a Zone File and put all the Resource Records (RRs) into
@@ -26,7 +25,7 @@ internally. See below for information on the accessor methods.
 
 %prep
 
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{module}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,6 +46,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{perl_vendorlib}/DNS/ZoneParse.pm
+%{perl_vendorlib}/DNS
 %{_mandir}/*/*
-
