@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	0.95
-Release:	%mkrel 3
+Release:	%mkrel 5
 Summary:	Parse and manipulate DNS Zone Files
 License:	GPL or Artistic
 Group:		Development/Perl
