@@ -1,8 +1,8 @@
 %define	module DNS-ZoneParse
 
 Name:		perl-%{module}
-Version:	0.95
-Release:	%mkrel 5
+Version:	0.96
+Release:	%mkrel 1
 Summary:	Parse and manipulate DNS Zone Files
 License:	GPL or Artistic
 Group:		Development/Perl
