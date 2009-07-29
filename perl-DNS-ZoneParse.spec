@@ -1,15 +1,18 @@
-%define	module DNS-ZoneParse
+%define	upstream_name    DNS-ZoneParse
+%define	upstream_version 0.96
 
-Name:		perl-%{module}
-Version:	0.96
-Release:	%mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Parse and manipulate DNS Zone Files
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://search.cpan.org/CPAN/modules/by-module/DNS/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/modules/by-module/DNS/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module will parse a Zone File and put all the Resource Records (RRs) into
@@ -24,12 +27,10 @@ into its constituent records. It then parses each record and stores the records
 internally. See below for information on the accessor methods.
 
 %prep
-
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
 %make
 
 %check
@@ -37,7 +38,6 @@ internally. See below for information on the accessor methods.
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean 
