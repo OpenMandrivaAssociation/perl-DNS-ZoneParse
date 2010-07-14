@@ -1,5 +1,5 @@
 %define	upstream_name    DNS-ZoneParse
-%define upstream_version 0.99
+%define upstream_version 1.00
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
