@@ -1,15 +1,14 @@
 %define	upstream_name    DNS-ZoneParse
-%define upstream_version 1.00
-
+%define upstream_version 1.10
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 1.10
+Release:	1
 
 Summary:	Parse and manipulate DNS Zone Files
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/modules/by-module/DNS/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/modules/by-module/DNS/DNS-ZoneParse-1.10.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -91,4 +90,5 @@ Import perl-DNS-ZoneParse
 
 * Fri Oct 13 2006 Oden Eriksson <oeriksson@mandriva.com> 0.95-1mdv2007.1
 - initial Mandriva package
+
 
