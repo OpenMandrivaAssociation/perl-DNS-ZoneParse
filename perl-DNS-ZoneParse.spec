@@ -2,7 +2,7 @@
 %define upstream_version 1.10
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.10
-Release:	2
+Release:	3
 
 Summary:	Parse and manipulate DNS Zone Files
 License:	GPL+ or Artistic
