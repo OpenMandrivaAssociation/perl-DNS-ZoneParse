@@ -7,7 +7,7 @@ Release:	3
 Summary:	Parse and manipulate DNS Zone Files
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/modules/by-module/DNS/DNS-ZoneParse-1.10.tar.gz
 
 BuildRequires:	perl-devel
