@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/modules/by-module/DNS/DNS-ZoneParse-1.10.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
