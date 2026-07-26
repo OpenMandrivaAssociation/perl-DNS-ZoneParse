@@ -1,13 +1,12 @@
 %define	upstream_name    DNS-ZoneParse
-%define upstream_version 1.10
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 1.10
-Release:	3
+Version:	1.10
+Release:	4
 
 Summary:	Parse and manipulate DNS Zone Files
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
+Url:		https://metacpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/modules/by-module/DNS/DNS-ZoneParse-1.10.tar.gz
 
 BuildRequires:	make
@@ -27,7 +26,7 @@ into its constituent records. It then parses each record and stores the records
 internally. See below for information on the accessor methods.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -60,9 +59,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.960.0-1mdv2010.0
 + Revision: 403155
-- rebuild using %%perl_convert_version
-
-* Sun Nov 16 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.96-1mdv2009.1
+- rebuild using %1.10 Sun Nov 16 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.96-1mdv2009.1
 + Revision: 303772
 - update to new version 0.96
 
